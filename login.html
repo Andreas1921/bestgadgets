@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+<meta charset="UTF-8">
+<title>Σύνδεση</title>
+<style>
+body { font-family: Arial; background: #f0f0f0; padding: 30px; }
+.container { background: #fff; padding: 20px; max-width: 300px; margin: auto; border-radius: 8px; }
+input { width: 100%; padding: 10px; margin: 10px 0; }
+button { width: 100%; padding: 10px; background: #007bff; color: white; border: none; }
+a { display: block; text-align: center; margin-top: 10px; }
+</style>
+</head>
+<body>
+<div class="container">
+<h2>Σύνδεση</h2>
+<input type="text" placeholder="Όνομα χρήστη" id="username">
+<input type="password" placeholder="Κωδικός" id="password">
+<button onclick="login()">Σύνδεση</button>
+<a href="register.html">Δεν έχεις λογαριασμό; Κάνε εγγραφή</a>
+</div>
+
+<script>
+function login() {
+alert("Προσπάθεια σύνδεσης (demo)!");
+// Εδώ θα μπουν πραγματικοί έλεγχοι με βάση backend
+}
+</script>
+</body>
+</html>
