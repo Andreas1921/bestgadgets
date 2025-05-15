@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+<meta charset="UTF-8">
+<title>AndreasShop - Αρχική</title>
+<style>
+body { font-family: Arial; padding: 20px; background: #f4f4f4; }
+.product { border: 1px solid #ccc; padding: 10px; margin: 10px; background: #fff; display: inline-block; width: 200px; }
+.product img { width: 100%; }
+.cart { margin-top: 20px; padding: 10px; background: #e9e9e9; }
+button { background-color: #007bff; color: white; border: none; padding: 5px 10px; cursor: pointer; }
+</style>
+</head>
+<body>
+
+<h1>Καλώς ήρθες στο AndreasShop!</h1>
+
+<div class="product">
+<img src="https://via.placeholder.com/200" alt="Προϊόν 1">
+<h3>Καπέλο</h3>
+<p>Τιμή: 10€</p>
+<button onclick="addToCart('Καπέλο', 10)">Προσθήκη στο καλάθι</button>
+</div>
+
+<div class="product">
+<img src="https://via.placeholder.com/200" alt="Προϊόν 2">
+<h3>Μπλούζα</h3>
+<p>Τιμή: 20€</p>
+<button onclick="addToCart('Μπλούζα', 20)">Προσθήκη στο καλάθι</button>
+</div>
+
+<div class="product">
+<img src="https://via.placeholder.com/200" alt="Προϊόν 3">
+<h3>Παπούτσια</h3>
+<p>Τιμή: 50€</p>
+<button onclick="addToCart('Παπούτσια', 50)">Προσθήκη στο καλάθι</button>
+</div>
+
+<div class="cart">
+<h2>Καλάθι:</h2>
+<ul id="cartItems"></ul>
+<p><strong>Σύνολο: <span id="total">0</span>€</strong></p>
+<button onclick="checkout()">Αγορά</button>
+</div>
+
+<script>
+let total = 0;
+function addToCart(product, price) {
+const list = document.getElementById("cartItems");
+const item = document.createElement("li");
+item.textContent = `${product} - ${price}€`;
+list.appendChild(item);
+total += price;
+document.getElementById("total").textContent = total;
+}
+
+function checkout() {
+alert("Η παραγγελία σου ολοκληρώθηκε! Σύνολο: " + total + "€");
+}
+</script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
